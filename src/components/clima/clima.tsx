@@ -2,6 +2,13 @@ import { useContext, useEffect, useState } from "react"
 import { climaContext } from "../../context/climaContext"
 import { api } from "../../hooks/api"
 import { Search } from "../bar/search"
+import Sol from '../../assets/images/sun.png'
+import Frio from '../../assets/images/frio.png'
+import Chuva from '../../assets/images/rain.jpg'
+import Vento from '../../assets/images/wind.png'
+import Umidade from '../../assets/images/hum.png'
+import Loading from '../../assets/images/loading.gif'
+
 import './clima.css'
 
 export type Clima = {
@@ -21,14 +28,14 @@ export const Clima = () => {
                 if(parseInt(clima.tmp) < 20){
                    
                     return {
-                        photo: '../../assets/images/frio.png',
+                        photo: Frio,
                         text: 'Um dia friozinho para ficar com a morena',
                         className: 'frio'
                     }
                 } 
                 else {
                     return {
-                        photo: '../../assets/images/sun.png',
+                        photo: Sol,
                         text: 'Um dia quente para ir para Práia',
                         className: 'sol'
                     }
@@ -54,7 +61,7 @@ export const Clima = () => {
         <ul className="clima-main">
             {loading == 'loading' ? 
             <li className="flex" id="loading">
-                <img src="../../assets/images/loading.gif" alt="" width={200} />
+                <img src={Loading} alt="" width={200} />
                 <h2>Loading</h2>
             </li> : 
             <>
@@ -69,21 +76,21 @@ export const Clima = () => {
             </li>
             <li className="flex " title="Velocidade do Vento"> 
             
-                <img className="wind" src="../../assets/images/wind.png" alt="" width={50} />
+                <img className="wind" src={Vento} alt="" width={50} />
                 <h2>
                     {clima && clima.wind}
                 </h2> 
             </li>
             <li className="flex" title="Umidade do ar"> 
             
-                <img src="../../assets/images/hum.png" alt="" width={50} />
+                <img src={Umidade} alt="" width={50} />
                 <h2>
                     {clima && clima.hum}
                 </h2> 
             </li>
             <li className="flex" title="Porcentagem de Chuva"> 
             
-                <img src="../../src/assets/images/rain.jpg" alt="" width={50} />
+                <img src={Chuva} alt="" width={50} />
                 <h2>
                     {clima && clima.rain}
                 </h2> 

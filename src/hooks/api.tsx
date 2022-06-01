@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const app = axios.create({
-    baseURL: 'https://api-clima-state.herokuapp.com/'
+    baseURL: 'https://api-clima-state.herokuapp.com'
 })
 
 export const api = () => ({
