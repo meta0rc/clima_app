@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+
+}
+
+:root {
+    --default: rgb(194, 238, 255);
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.collumn { 
+    flex-direction: column;
+}
+.container {
+    padding: 3%;
+}
+.title-principal {
+    text-align: center;
+    font-size: 2.5em;
+}
+.centered {
+    align-items: center;
+}
+footer {
+    background: rgb(255, 202, 103);
+
+    padding: 15px;
+}

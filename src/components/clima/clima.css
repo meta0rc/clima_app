@@ -1,0 +1,35 @@
+.clima-main {
+    width: 80%;
+    height: 100%;
+    margin: 25px auto;
+    padding: 10px;
+
+}
+.clima-main li {
+    margin: 0 auto;
+    justify-content: space-evenly;
+    width: 250px;
+    border-bottom: 1px solid #ccc;
+    padding: 5%;
+}
+
+.clima-main li h2 {
+    font-size: 2em;
+    margin-left: 10px;
+}
+.frio {
+    color :rgb(0, 140, 255);
+}
+.sol {
+    color: orange;
+}
+.wind { 
+    position: relative;
+    left: 15px;
+}
+.title-previsao {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 25px;
+}
+#loading { border: none}
