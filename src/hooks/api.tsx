@@ -7,7 +7,7 @@ const app = axios.create({
 export const api = () => ({
 
     getDefault: async () => {
-        const response = await app.get('/')
+        const response = await app.get('/default')
 
         const res = { 
             status: response.status,
